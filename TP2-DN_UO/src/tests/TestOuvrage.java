@@ -22,21 +22,21 @@ public class TestOuvrage {
     }
 
     public void Testseries(){
-//        Serie s1 = new Serie("Family guys");
-//        Pays p1 = new Pays("Canada");
-//        Pays p2 = new Pays("Etats-unis");
-//        Auteur a1 = new Auteur("Jean", "Jean",p1);
-//        Auteur a2 = new Auteur("Jack", "leduc", p2);
-//        Ouvrage o1 = new Ouvrage("Jean", a1, Ouvrage.Format.VIDEO );
-//       Ouvrage o2 = new Ouvrage("Labelle", a2, Ouvrage.Format.AUDIO );
-//        System.out.println("---------Test series-----------------");
-//
-//
-//        s1.getListeOuvrage().add(o1);
-//        System.out.println(s1);
-//
-//        s1.getListeOuvrage().remove(o1);
-//        System.out.println(s1);
+        Serie s1 = new Serie("Family guys");
+        Pays p1 = new Pays("Canada");
+        Pays p2 = new Pays("Etats-unis");
+        Auteur a1 = new Auteur("Jean", "Jean",p1);
+        Auteur a2 = new Auteur("Jack", "leduc", p2);
+        Ouvrage o1 = new Ouvragevideo("Jean", a1 );
+       Ouvrage o2 = new OuvrageAudio("Labelle", a2);
+        System.out.println("---------Test series-----------------");
+
+
+        s1.getListeOuvrage().add(o1);
+        System.out.println(s1);
+
+        s1.getListeOuvrage().remove(o1);
+        System.out.println(s1);
 
     }
 
@@ -76,12 +76,12 @@ public class TestOuvrage {
         livre1.setDate(LocalDate.now().minusYears(5));
         System.out.println(livre1);
 
-        //Test de la validation sur le nb d'exemplaires (valide et non valide)
-//        Ouvrage livre2 = new Ouvrage("Tout va bien", albertine, Ouvrage.Format.AUDIO, LocalDate.now(), -10);
-//        System.out.println(livre2);
-//
-//        livre2 = new OuvragePapier("Tout va bien", albertine,LocalDate.now(), 20);
-//        System.out.println(livre2);
+//        Test de la validation sur le nb d'exemplaires (valide et non valide)
+        Ouvrage livre2 = new OuvrageAudio("Tout va bien", albertine,  LocalDate.now(), -10);
+        System.out.println(livre2);
+
+        livre2 = new OuvragePapier("Tout va bien", albertine,LocalDate.now(), 20);
+        System.out.println(livre2);
 
         System.out.println("\n-----Tests des méthodes acheter et vendre-----------");
 
