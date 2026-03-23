@@ -12,7 +12,6 @@ public class Serie {
     {
         this.nom = nom;
     }
-
     
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
+import livres.Pays;
 
 /**
  * CoursPOO 1
@@ -18,8 +19,15 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.testPays();
     }
 
+    public void testPays() {
+        Pays p1 = new Pays("Canada");
+        Auteur a1 = new Auteur("Tremblay","Michel", p1.toString());
+        System.out.println(a1);
+        System.out.println(p1.getCodePays());
+    }
 
     public void testOuvrages() {
         //Deux auteurs deja prets pour les tests...
