@@ -26,8 +26,10 @@ public class TestOuvrage {
 
     public void Testseries(){
         Serie s1 = new Serie("Family guys");
-        Auteur a1 = new Auteur("Jean", "Jean","Canada");
-        Auteur a2 = new Auteur("Jack", "leduc", "United States");
+        Pays p1 = new Pays("Canada");
+        Pays p2 = new Pays("Etats-unis");
+        Auteur a1 = new Auteur("Jean", "Jean",p1);
+        Auteur a2 = new Auteur("Jack", "leduc", p2);
         Ouvrage o1 = new Ouvrage("Jean", a1, Ouvrage.Format.VIDEO );
         Ouvrage o2 = new Ouvrage("Labelle", a2, Ouvrage.Format.AUDIO );
         System.out.println("---------Test series-----------------");

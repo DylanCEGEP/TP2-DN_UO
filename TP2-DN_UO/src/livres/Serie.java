@@ -8,13 +8,7 @@ public class Serie {
     private String nom;
     private ArrayList<Ouvrage> listeOuvrage;
 
-    @Override
-    public String toString() {
-        return "Serie{" +
-                "nom='" + nom + '\'' +
-                ", listeOuvrage=" + listeOuvrage +
-                '}';
-    }
+
 
     public Serie(String nom)
     {
@@ -37,5 +31,13 @@ public class Serie {
 
     public void setListeOuvrage(ArrayList<Ouvrage> listeOuvrage) {
         this.listeOuvrage = listeOuvrage;
+    }
+
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "nom='" + nom + '\'' +
+                ", listeOuvrage=" + listeOuvrage +
+                '}';
     }
 }
