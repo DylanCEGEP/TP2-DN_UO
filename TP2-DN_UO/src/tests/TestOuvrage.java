@@ -5,6 +5,7 @@ import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -18,6 +19,24 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.Testseries();
+    }
+
+    public void Testseries(){
+        Serie s1 = new Serie("Family guys");
+        Auteur a1 = new Auteur("Jean", "Jean","Canada");
+        Auteur a2 = new Auteur("Jack", "leduc", "United States");
+        Ouvrage o1 = new Ouvrage("Jean", a1, Ouvrage.Format.VIDEO );
+        Ouvrage o2 = new Ouvrage("Labelle", a2, Ouvrage.Format.AUDIO );
+        System.out.println("---------Test series-----------------");
+
+
+        s1.getListeOuvrage().add(o1);
+        System.out.println(s1);
+
+        s1.getListeOuvrage().remove(o1);
+        System.out.println(s1);
+
     }
 
 

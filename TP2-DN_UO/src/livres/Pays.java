@@ -1,12 +1,12 @@
 package livres;
 
 public class Pays {
-    private String nom;
+    private String nomPays;
     private String codePays;
 
-    public Pays(String nom) {
-        this.nom = nom;
-        this.codePays =nom.toUpperCase() ;
+    public Pays(String nomPays) {
+        this.nomPays = nomPays;
+        this.codePays = nomPays.toUpperCase() ;
         this.codePays = codePays.substring(0,2);
     }
 }
